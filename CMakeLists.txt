@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.26)
+project(ToDoList)
+
+set(CMAKE_CXX_STANDARD 17)
+
+find_package(Curses REQUIRED)
+include_directories(${CURSES_INCLUDE_DIR})
+
+add_executable(ToDoList main.cpp
+        Date.cpp
+        Date.h
+        Register.cpp
+        Register.h
+        Activity.cpp
+        Activity.h)
+
+target_link_libraries(ToDoList ${CURSES_LIBRARIES})
