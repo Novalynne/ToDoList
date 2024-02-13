@@ -1,0 +1,9 @@
+"C:\Program Files\JetBrains\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\schir\CLionProjects\ToDoList -B C:\Users\schir\CLionProjects\ToDoList\cmake-build-debug
+-- Looking for cbreak in C:/MinGW/lib/libncurses.dll.a
+-- Looking for cbreak in C:/MinGW/lib/libncurses.dll.a - found
+-- Looking for nodelay in C:/MinGW/lib/libncurses.dll.a
+-- Looking for nodelay in C:/MinGW/lib/libncurses.dll.a - found
+-- Found Curses: C:/MinGW/lib/libncurses.dll.a  
+-- Configuring done (1.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug

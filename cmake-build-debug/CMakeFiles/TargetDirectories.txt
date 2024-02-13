@@ -1,0 +1,3 @@
+C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug/CMakeFiles/ToDoList.dir
+C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug/CMakeFiles/rebuild_cache.dir
