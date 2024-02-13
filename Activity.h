@@ -33,10 +33,6 @@ public:
     const Date &getDate() const;
     void setDate(const Date &date);
 
-//IS EQUAL
-    bool is_equal(Activity b);
-    bool time_is_equal(Activity b);
-
 private:
     int begin_time_h;
     int begin_time_m;

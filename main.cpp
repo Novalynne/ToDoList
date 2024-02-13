@@ -1,10 +1,10 @@
-#include <iostream>
+
 #include "Register.h"
 #include "Activity.h"
 
 /*
  * (3) Registro di attività che memorizza cosa si è fatto durante una giornata.
- *     Classe che rappresenta attività con descrizione, tempo inizio e fine, fatto
+ *     Classe che rappresenta attività con descrizione, tempo inizio e fine.
  *     Classe registro che colleziona attività su base del giorno.
  *     Interfaccia semplice per mostrare il registro sulla base di un giorno fatta a scelta con:
             nCurses
@@ -36,14 +36,5 @@ int main() {
         aRegister.add_activity(act6);
     }
     list<Activity> result= aRegister.search_activity_daybased(date3);
-    list<Activity>::iterator itr;
-    printf("Attività registrate nel giorno: %d %d %d \n", date3.getDay(), date3.getMonth(), date3.getYear());
-    for (itr = result.begin(); itr != result.end(); itr++){
-        printf("Descrizione: %s \n", (*itr).getDescription().c_str());
-        printf("Tempo di inizio: %d : %d \n", (*itr).getBeginTimeH(), (*itr).getBeginTimeM());
-        printf("Tempo di fine: %d : %d \n", (*itr).getEndTimeH(),(*itr).getEndTimeM());
-        printf("------------------------------\n");
-    }
-    printf("Hai visualizzato tutte le attività del giorno!");
-    //aRegister.display_register(date2, result);
+    aRegister.display_register(date3, result);
 }

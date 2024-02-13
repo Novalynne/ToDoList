@@ -34,7 +34,7 @@ public:
     }
 
     //DISPLAY
-    void display_register(Date d, list<Activity> result);
+    int display_register(Date d, list<Activity> result);
 
 
 private:
