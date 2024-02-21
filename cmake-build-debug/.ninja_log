@@ -1,18 +1,6 @@
 # ninja log v5
-20	451	7295614468979523	CMakeFiles/ToDoList.dir/Activity.cpp.obj	f929d22bd13d3cf1
+24	588	7298868377714269	CMakeFiles/ToDoList.dir/Activity.cpp.obj	f929d22bd13d3cf1
 14	531	7295614469779020	CMakeFiles/ToDoList.dir/Date.cpp.obj	61b4101db39a4f63
-1	587	7295614470343195	CMakeFiles/ToDoList.dir/main.cpp.obj	3575fc9c475c7711
-7	665	7295614471149897	CMakeFiles/ToDoList.dir/Register.cpp.obj	556ee9dbedfd7619
-665	820	7295614472667905	ToDoList.exe	873c41b397bfedd5
-2	415	7295631627415916	CMakeFiles/ToDoList.dir/main.cpp.obj	3575fc9c475c7711
-415	551	7295631628704145	ToDoList.exe	873c41b397bfedd5
-2	493	7295650583432388	CMakeFiles/ToDoList.dir/main.cpp.obj	3575fc9c475c7711
-6	536	7295650583884751	CMakeFiles/ToDoList.dir/Register.cpp.obj	556ee9dbedfd7619
-537	708	7295650585510230	ToDoList.exe	873c41b397bfedd5
-3	560	7295666971931382	CMakeFiles/ToDoList.dir/main.cpp.obj	3575fc9c475c7711
-9	597	7295666972301674	CMakeFiles/ToDoList.dir/Register.cpp.obj	556ee9dbedfd7619
-597	757	7295666973845806	ToDoList.exe	873c41b397bfedd5
-3	384	7295667913061132	CMakeFiles/ToDoList.dir/main.cpp.obj	3575fc9c475c7711
-385	528	7295667914457317	ToDoList.exe	873c41b397bfedd5
-2	366	7295668282733434	CMakeFiles/ToDoList.dir/main.cpp.obj	3575fc9c475c7711
-366	505	7295668284072854	ToDoList.exe	873c41b397bfedd5
+766	1435	7298868385996012	ToDoList.exe	873c41b397bfedd5
+8	722	7298868379052131	CMakeFiles/ToDoList.dir/main.cpp.obj	3575fc9c475c7711
+19	766	7298868379498846	CMakeFiles/ToDoList.dir/Register.cpp.obj	556ee9dbedfd7619
