@@ -234,8 +234,8 @@ build test/CMakeFiles/runToDoListTests.dir/RegisterTest.cpp.obj: CXX_COMPILER__r
   OBJECT_DIR = test\CMakeFiles\runToDoListTests.dir
   OBJECT_FILE_DIR = test\CMakeFiles\runToDoListTests.dir
 
-build test/CMakeFiles/runToDoListTests.dir/RegisterFixure.cpp.obj: CXX_COMPILER__runToDoListTests_unscanned_Debug C$:/Users/schir/CLionProjects/ToDoList/test/RegisterFixure.cpp || cmake_object_order_depends_target_runToDoListTests
-  DEP_FILE = test\CMakeFiles\runToDoListTests.dir\RegisterFixure.cpp.obj.d
+build test/CMakeFiles/runToDoListTests.dir/ActivityTest.cpp.obj: CXX_COMPILER__runToDoListTests_unscanned_Debug C$:/Users/schir/CLionProjects/ToDoList/test/ActivityTest.cpp || cmake_object_order_depends_target_runToDoListTests
+  DEP_FILE = test\CMakeFiles\runToDoListTests.dir\ActivityTest.cpp.obj.d
   FLAGS = -g -std=gnu++1z -fdiagnostics-color=always
   INCLUDES = -isystem C:/Users/schir/CLionProjects/ToDoList/test/lib/googletest-main/googletest/include -isystem C:/Users/schir/CLionProjects/ToDoList/test/lib/googletest-main/googletest
   OBJECT_DIR = test\CMakeFiles\runToDoListTests.dir
@@ -249,7 +249,7 @@ build test/CMakeFiles/runToDoListTests.dir/RegisterFixure.cpp.obj: CXX_COMPILER_
 #############################################
 # Link the executable test\runToDoListTests.exe
 
-build test/runToDoListTests.exe: CXX_EXECUTABLE_LINKER__runToDoListTests_Debug test/CMakeFiles/runToDoListTests.dir/runAllTest.cpp.obj test/CMakeFiles/runToDoListTests.dir/DateTest.cpp.obj test/CMakeFiles/runToDoListTests.dir/RegisterTest.cpp.obj test/CMakeFiles/runToDoListTests.dir/RegisterFixure.cpp.obj | lib/libgtest.a lib/libgtest_main.a libcore.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a libcore.a
+build test/runToDoListTests.exe: CXX_EXECUTABLE_LINKER__runToDoListTests_Debug test/CMakeFiles/runToDoListTests.dir/runAllTest.cpp.obj test/CMakeFiles/runToDoListTests.dir/DateTest.cpp.obj test/CMakeFiles/runToDoListTests.dir/RegisterTest.cpp.obj test/CMakeFiles/runToDoListTests.dir/ActivityTest.cpp.obj | lib/libgtest.a lib/libgtest_main.a libcore.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a libcore.a
   FLAGS = -g
   LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  libcore.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = test\CMakeFiles\runToDoListTests.dir
