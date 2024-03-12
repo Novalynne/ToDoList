@@ -7,6 +7,16 @@
 //COSTRUTTORE
 Activity::Activity(int beginTime_h, int beginTime_m, int endTime_h, int endTime_m, string description, Date date) : begin_time_h(beginTime_h), begin_time_m(beginTime_m), end_time_h(endTime_h), end_time_m(endTime_m), description(description), date(date) {}
 
+//IS_EQUAL
+bool Activity::is_equal(Activity b) {
+    if(date.is_equal(b.date) && begin_time_h == b.getBeginTimeH() && begin_time_m == b.getBeginTimeM() && end_time_h == b.getEndTimeH() && end_time_m == b.getEndTimeM() && description == b.getDescription()){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 // GETTER E SETTER
 string Activity::getDescription() const {
     return description;
@@ -49,3 +59,4 @@ int Activity::getEndTimeM() const {
 void Activity::setEndTimeM(int endTimeM) {
     end_time_m = endTimeM;
 }
+

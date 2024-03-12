@@ -52,3 +52,20 @@ TEST(RegisterTest, Add_Activity){
     EXPECT_EQ(aRegister.getReg().front().getDate().getMonth(), 2);
     EXPECT_EQ(aRegister.getReg().front().getDate().getYear(), 2023);
 }
+
+TEST(RegisterTest, Remove_Activity){
+    Register aRegister("Zayne's Calendar");
+    Date date1(26, 2, 2023);
+    Date date2(28, 12, 2002);
+    Date date3(20,1,1972);
+    Activity activity_1(14, 30, 23, 30, "Critical Role Watch", date1);
+    Activity activity_2(14,30,16,48,"My Birthday", date2);
+    Activity activity_3(13,25,15,37,"Mom's Birthday", date3);
+    aRegister.add_activity(activity_1);
+    aRegister.add_activity(activity_2); //non inserisco la terza attività
+    EXPECT_EQ(aRegister.getReg().size(), 2); //controllo la dimensione del registro
+    aRegister.delete_activity(activity_2);
+    EXPECT_EQ(aRegister.getReg().size(), 1); //ri-controllo la dimensione del registro
+    aRegister.delete_activity(activity_3);
+
+}

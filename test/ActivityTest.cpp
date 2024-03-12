@@ -27,3 +27,13 @@ TEST(ActivityTest, SetterTest){
     EXPECT_EQ(activity.getDate().getMonth(), 12);
     EXPECT_EQ(activity.getDate().getYear(), 2024);
 }
+
+TEST(ActivityTest, IsEqualTest){
+    Date date(28, 12, 2002);
+    Activity activity_1(14,30,16,48,"My Birthday", date);
+    Activity activity_2(14,30,16,48,"My Birthday", date);
+    Date date2(31, 7, 1970);
+    Activity activity_3(19,45,22,0,"Dad's Birthday", date2);
+    ASSERT_TRUE(activity_1.is_equal(activity_2));
+    ASSERT_FALSE(activity_1.is_equal(activity_3));
+}

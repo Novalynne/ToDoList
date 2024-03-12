@@ -33,6 +33,9 @@ public:
         reg.push_back(activity);
     }
 
+    //REMOVE_ACTIVITY
+    void delete_activity(Activity activity);
+
     //DISPLAY
     int display_register(Date d, list<Activity> result);
 

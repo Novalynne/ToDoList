@@ -14,6 +14,10 @@ public:
     //COSTRUTTORE
     Activity(int beginTime_h, int beginTime_m, int endTime_h, int endTime_m, string description, Date date);
 
+
+//IS_EQUAL
+    bool is_equal(Activity b);
+
 //GETTER E SETTER
     int getBeginTimeH() const;
     void setBeginTimeH(int beginTimeH);

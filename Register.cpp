@@ -38,6 +38,22 @@ int Register::display_register(Date d, list<Activity> result){
     endwin();
     return 0;
 }
+//DELETE_ACTIVITY
+void Register::delete_activity(Activity activity) {
+    list<Activity>::iterator itr;
+    bool found=false;
+    for(itr=reg.begin(); itr != reg.end(); itr++){
+        if((*itr).is_equal(activity)){
+            reg.erase(itr);
+            found=true;
+            itr=reg.end();
+        }
+    }
+    if(found==false){
+        cout<< "Error. Activity not found in your register" <<endl;
+    }
+
+}
 
 //GETTER
 list<Activity> Register::getReg() const {
