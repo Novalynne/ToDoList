@@ -331,6 +331,9 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
 
+//Path to a program.
+PYTHON_EXECUTABLE:FILEPATH=PYTHON_EXECUTABLE-NOTFOUND
+
 //Value Computed by CMake
 ToDoList_BINARY_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug
 
@@ -341,34 +344,40 @@ ToDoList_IS_TOP_LEVEL:STATIC=ON
 ToDoList_SOURCE_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug/test/lib/googletest-main/googlemock
+gmock_BINARY_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug/test/lib/googletest-1.8.x/googlemock
 
 //Value Computed by CMake
 gmock_IS_TOP_LEVEL:STATIC=OFF
 
+//Dependencies for the target
+gmock_LIB_DEPENDS:STATIC=general;gtest;
+
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/test/lib/googletest-main/googlemock
+gmock_SOURCE_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/test/lib/googletest-1.8.x/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
 
+//Dependencies for the target
+gmock_main_LIB_DEPENDS:STATIC=general;gmock;
+
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug/test/lib/googletest-main
+googletest-distribution_BINARY_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug/test/lib/googletest-1.8.x
 
 //Value Computed by CMake
 googletest-distribution_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/test/lib/googletest-main
+googletest-distribution_SOURCE_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/test/lib/googletest-1.8.x
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug/test/lib/googletest-main/googletest
+gtest_BINARY_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug/test/lib/googletest-1.8.x/googlemock/gtest
 
 //Value Computed by CMake
 gtest_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/test/lib/googletest-main/googletest
+gtest_SOURCE_DIR:STATIC=C:/Users/schir/CLionProjects/ToDoList/test/lib/googletest-1.8.x/googletest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -385,6 +394,9 @@ gtest_force_shared_crt:BOOL=OFF
 
 //Build gtest with internal symbols hidden in shared libraries.
 gtest_hide_internal_symbols:BOOL=OFF
+
+//Dependencies for the target
+gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 
 ########################
@@ -593,12 +605,14 @@ FIND_PACKAGE_MESSAGE_DETAILS_Curses:INTERNAL=[C:/MinGW/lib/libncurses.dll.a][C:/
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_EXECUTABLE
+PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/ToDoList
 cmake_package_name:INTERNAL=GTest
-generated_dir:INTERNAL=C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug/test/lib/googletest-main/googletest/generated
+generated_dir:INTERNAL=C:/Users/schir/CLionProjects/ToDoList/cmake-build-debug/test/lib/googletest-1.8.x/googlemock/gtest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_build_samples

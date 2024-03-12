@@ -11,7 +11,7 @@ TEST(ActivityTest, ConstructorTest){
     EXPECT_EQ(activity.getBeginTimeM(), 30);
     EXPECT_EQ(activity.getEndTimeH(), 16);
     EXPECT_EQ(activity.getEndTimeM(), 48);
-    EXPECT_EQ(activity.getDescription().c_str(), "My Birthday");
+    EXPECT_EQ(activity.getDescription(), "My Birthday");
 }
 
 TEST(ActivityTest, SetterTest){
@@ -20,7 +20,7 @@ TEST(ActivityTest, SetterTest){
     activity.setBeginTimeH(3); //ho deciso di controllare solo un set dato che i restanti sono uguali solo con come diverso
     EXPECT_EQ(activity.getBeginTimeH(), 3);
     activity.setDescription("Bla bla bla"); //controllo descrizione
-    EXPECT_EQ(activity.getDescription().c_str(), "Bla bla bla");
+    EXPECT_EQ(activity.getDescription(), "Bla bla bla");
     Date d(31,12,2024); //controllo data
     activity.setDate(d);
     EXPECT_EQ(activity.getDate().getDay(), 31); //controllo data

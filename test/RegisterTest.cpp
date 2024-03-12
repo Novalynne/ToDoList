@@ -24,13 +24,13 @@ TEST(RegisterTest, Search_Activity_Daybased){
     aRegister.add_activity(activity2);
     aRegister.add_activity(activity3);
     list<Activity> result= aRegister.search_activity_daybased(date3); //cerco le attività segnate nella data 3/1/2
-    EXPECT_EQ(result.front().getDescription().c_str(), "Mom's Birthday");
+    EXPECT_EQ(result.front().getDescription(), "Mom's Birthday");
     result.clear(); //svuoto result
     result= aRegister.search_activity_daybased(date2);
-    EXPECT_EQ(result.front().getDescription().c_str(), "My Birthday");
+    EXPECT_EQ(result.front().getDescription(), "My Birthday");
     result.clear();
     result= aRegister.search_activity_daybased(date1);
-    EXPECT_EQ(result.front().getDescription().c_str(), "Dad's Birthday");
+    EXPECT_EQ(result.front().getDescription(), "Dad's Birthday");
     // la data 4 non presenta attività inserite nel registro quindi non può essere cercata dalla funzione e inserita in result (size result 0)
     result.clear();
     result= aRegister.search_activity_daybased(date4);
@@ -43,7 +43,7 @@ TEST(RegisterTest, Add_Activity){
     Activity activity(14, 30, 23, 30, "Critical Role Watch", date);
     aRegister.add_activity(activity);
     EXPECT_EQ(aRegister.getReg().size(), 1); //controllo dimensione del registro
-    EXPECT_EQ(aRegister.getReg().front().getDescription().c_str(), "Critical Role Watch"); //controllo descrizione
+    EXPECT_EQ(aRegister.getReg().front().getDescription(), "Critical Role Watch"); //controllo descrizione
     EXPECT_EQ(aRegister.getReg().front().getBeginTimeH(), 14); //controllo ora inizio fine
     EXPECT_EQ(aRegister.getReg().front().getBeginTimeM(), 30);
     EXPECT_EQ(aRegister.getReg().front().getEndTimeH(), 23);
