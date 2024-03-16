@@ -20,6 +20,21 @@ list<Activity> Register::search_activity_daybased (Date d){
     return result;
 }
 
+//SEARCH ACTIVITY
+bool Register::search_activity(Activity activity) {
+    list<Activity>::iterator itr;
+    bool found=false;
+    for(itr=reg.begin(); itr != reg.end(); itr++){
+        if(activity.is_equal(*itr)){
+            found=true;
+        }
+    }
+    if(found==true){
+        cout<<"Activity found!"<<endl;
+    }
+    return found;
+}
+
 //DISPLAY
 int Register::display_register(Date d, list<Activity> result){
     initscr();
@@ -53,6 +68,13 @@ void Register::delete_activity(Activity activity) {
         cout<< "Error. Activity not found in your register" <<endl;
     }
 
+}
+
+
+
+//REGISTER_SIZE
+int Register::register_size() {
+    reg.size();
 }
 
 //GETTER

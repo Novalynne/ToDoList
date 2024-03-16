@@ -28,6 +28,9 @@ public:
     //SEARCH DAYBASED
     list<Activity> search_activity_daybased (Date d); //funzione che mi ricerca il giorno nel registro
 
+    //SEARCH ACTIVITY
+    bool search_activity(Activity activity);
+
     //ADD_ACTIVITY
     void add_activity(const Activity& activity){
         reg.push_back(activity);
@@ -35,6 +38,9 @@ public:
 
     //REMOVE_ACTIVITY
     void delete_activity(Activity activity);
+
+    //REGISTER_SIZE
+    int register_size();
 
     //DISPLAY
     int display_register(Date d, list<Activity> result);

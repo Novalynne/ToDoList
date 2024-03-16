@@ -15,7 +15,7 @@ public:
     bool is_equal(Date b);
 
     //CONTROLLO DATE
-    bool is_date_correct();
+    void is_date_correct();
 
     //GET E SET
     int getDay() const;

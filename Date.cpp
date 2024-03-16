@@ -3,11 +3,19 @@
 //
 
 #include "Date.h"
+#include "stdexcept"
 #include <iostream>
 using namespace std;
 
 //COSTRUTTORE
-Date::Date(int day, int month, int year) : day(day), month(month), year(year){}
+Date::Date(int day, int month, int year) : day(day), month(month), year(year){
+    try{
+        this->is_date_correct();
+    }
+    catch(const invalid_argument& e){
+        cout<< e.what() << endl;
+    }
+}
 
 //IS EQUAL
 bool Date::is_equal(Date b) {
@@ -20,31 +28,27 @@ bool Date::is_equal(Date b) {
 }
 
 //DATE CORRECT?
-bool Date::is_date_correct() {
+void Date::is_date_correct() {
     //controllo prima che la data stia nel max intervallo di mesi e giorni
     //controllo mese
     if(month>12 || month<1){
-        cout<<"Month not valid."<<endl;
-        return false;
+        throw invalid_argument("Invalid month");
     }
     //controllo giorno
     if(day<1 || day>31){
-        cout<<"Day not valid."<<endl;
-        return false;
+        throw invalid_argument("Invalid day");
     }
     //ora controllo i mesi che hanno massimo 30 giorni
     if((month==4 || month==6 || month==9 || month==11) && day>30){
-        cout<< "This month " << month << " has a max of 30 days." <<endl;
-        return false;
+        throw invalid_argument("Invalid month, this month has 30 days.");
     }
     else if(month==2){  //ora controllo febbraio a seconda se l'anno è bisestile o no.
         if(((year % 4 ==0 && year % 100 !=0) || (year % 400 ==0)) && day>29){
-            cout<<"Febuary in a leap year has a max of 29 days."<<endl;
-            return false;
+            throw invalid_argument("Invalid day. Febuary in a leap year has a max of 29 days.");
         }
         else if(day>28){
             cout<<"Febuary in a normal year has a max of 28 days."<<endl;
-            return false;
+            throw invalid_argument("Invalid day. Febuary in a normal year has a max of 28 days.");
         }
     }
 }

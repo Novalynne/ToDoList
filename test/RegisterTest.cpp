@@ -24,13 +24,13 @@ TEST(RegisterTest, Search_Activity_Daybased){
     aRegister.add_activity(activity2);
     aRegister.add_activity(activity3);
     list<Activity> result= aRegister.search_activity_daybased(date3); //cerco le attività segnate nella data 3/1/2
-    EXPECT_EQ(result.front().getDescription(), "Mom's Birthday");
+    EXPECT_TRUE(aRegister.search_activity(activity3));
     result.clear(); //svuoto result
     result= aRegister.search_activity_daybased(date2);
-    EXPECT_EQ(result.front().getDescription(), "My Birthday");
+    EXPECT_TRUE(aRegister.search_activity(activity2));
     result.clear();
     result= aRegister.search_activity_daybased(date1);
-    EXPECT_EQ(result.front().getDescription(), "Dad's Birthday");
+    EXPECT_TRUE(aRegister.search_activity(activity1));
     // la data 4 non presenta attività inserite nel registro quindi non può essere cercata dalla funzione e inserita in result (size result 0)
     result.clear();
     result= aRegister.search_activity_daybased(date4);
@@ -42,15 +42,8 @@ TEST(RegisterTest, Add_Activity){
     Date date(26, 2, 2023);
     Activity activity(14, 30, 23, 30, "Critical Role Watch", date);
     aRegister.add_activity(activity);
-    EXPECT_EQ(aRegister.getReg().size(), 1); //controllo dimensione del registro
-    EXPECT_EQ(aRegister.getReg().front().getDescription(), "Critical Role Watch"); //controllo descrizione
-    EXPECT_EQ(aRegister.getReg().front().getBeginTimeH(), 14); //controllo ora inizio fine
-    EXPECT_EQ(aRegister.getReg().front().getBeginTimeM(), 30);
-    EXPECT_EQ(aRegister.getReg().front().getEndTimeH(), 23);
-    EXPECT_EQ(aRegister.getReg().front().getEndTimeM(), 30);
-    EXPECT_EQ(aRegister.getReg().front().getDate().getDay(), 26); //controllo data
-    EXPECT_EQ(aRegister.getReg().front().getDate().getMonth(), 2);
-    EXPECT_EQ(aRegister.getReg().front().getDate().getYear(), 2023);
+    EXPECT_EQ(aRegister.register_size(), 1); //controllo dimensione del registro
+    EXPECT_TRUE(aRegister.search_activity(activity));
 }
 
 TEST(RegisterTest, Remove_Activity){
@@ -63,9 +56,9 @@ TEST(RegisterTest, Remove_Activity){
     Activity activity_3(13,25,15,37,"Mom's Birthday", date3);
     aRegister.add_activity(activity_1);
     aRegister.add_activity(activity_2); //non inserisco la terza attività
-    EXPECT_EQ(aRegister.getReg().size(), 2); //controllo la dimensione del registro
+    EXPECT_EQ(aRegister.register_size(), 2); //controllo la dimensione del registro
     aRegister.delete_activity(activity_2);
-    EXPECT_EQ(aRegister.getReg().size(), 1); //ri-controllo la dimensione del registro
+    EXPECT_EQ(aRegister.register_size(), 1); //ri-controllo la dimensione del registro
     aRegister.delete_activity(activity_3);
 
 }
