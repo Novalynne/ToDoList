@@ -21,25 +21,13 @@ TEST(DateTest, IsEqualDate) {
 }
 
 TEST(DateTest, IsDateCorrect) {
-    Date date(10, 1, 2023);
-    date.setMonth(0);
-    EXPECT_THROW(date.is_date_correct(), std::invalid_argument); // mese <1
-    date.setMonth(13); //10 13 2023
-    EXPECT_THROW(date.is_date_correct(), std::invalid_argument); // mese >12
-    date.setDay(33);
-    date.setMonth(8); //33 8 2023
-    EXPECT_THROW(date.is_date_correct(), std::invalid_argument); // giorno >31
-    date.setDay(0); //0 8 2023
-    EXPECT_THROW(date.is_date_correct(), std::invalid_argument); //giorno <1
-    date.setMonth(9);
-    date.setDay(31); //31 9 2023
-    EXPECT_THROW(date.is_date_correct(), std::invalid_argument); // mese 9 ha 30 giorni max
-    date.setMonth(2);
-    date.setDay(29); //29 2 2023
-    EXPECT_THROW(date.is_date_correct(), std::invalid_argument); //febbraio 2023 ha 28 giorni max
-    date.setYear(2024);
-    date.setDay(30); //30 2 2024
-    EXPECT_THROW(date.is_date_correct(), std::invalid_argument); // febbraio 2024 ha 29 giorni max
+
+    EXPECT_THROW(Date date(10, 0, 2023), std::invalid_argument); // mese <1
+    EXPECT_THROW(Date date(10, 13, 2023), std::invalid_argument); // mese >12
+    EXPECT_THROW(Date date(33, 8, 2023), std::invalid_argument); // giorno >31
+    EXPECT_THROW(Date date(0, 8, 2023), std::invalid_argument); //giorno <1
+    EXPECT_THROW(Date date(31, 9, 2023), std::invalid_argument); // mese 9 ha 30 giorni max
+    EXPECT_THROW(Date date(29, 2, 2023), std::invalid_argument); //febbraio 2023 ha 28 giorni max
+    EXPECT_THROW(Date date(30, 2, 2024), std::invalid_argument); // febbraio 2024 ha 29 giorni max
+
 }
-
-
